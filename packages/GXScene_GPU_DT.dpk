@@ -37,7 +37,7 @@ requires
   GLXcene_RT;
 
 contains
-  GPU.ComputingRegister in '..\Source\FMX\GPU.ComputingRegister.pas',
-  FMxCUDAEditor in '..\Source\FMX\FMxCUDAEditor.pas';
+  GPU.ComputingRegister in '..\Source\GPU.ComputingRegister.pas',
+  FMxCUDAEditor in '..\Source\FMxCUDAEditor.pas';
 
 end.

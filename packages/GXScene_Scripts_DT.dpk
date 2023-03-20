@@ -37,6 +37,6 @@ requires
   GXScene_Scripts_RT;
 
 contains
-  DWSx.Scene in '..\Source\FMX\DWSx.Scene.pas';
+  DWSx.Scene in '..\Source\DWSx.Scene.pas';
 
 end.

@@ -39,9 +39,9 @@ requires
   GXScene_RT;
 
 contains
-  Physix.ODERegister in '..\Source\FMX\Physix.ODERegister.pas',
-  Physix.NGDRegister in '..\Source\FMX\Physix.NGDRegister.pas',
-  Physix.ODEManager in '..\Source\FMX\Physix.ODEManager.pas';
+  Physix.ODERegister in '..\Source\Physix.ODERegister.pas',
+  Physix.NGDRegister in '..\Source\Physix.NGDRegister.pas',
+  Physix.ODEManager in '..\Source\Physix.ODEManager.pas';
 
 end.
 

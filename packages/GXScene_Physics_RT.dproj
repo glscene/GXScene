@@ -86,7 +86,6 @@
         <DCC_Description>GXScene Physics Managers</DCC_Description>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
-        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
@@ -145,7 +144,6 @@
         <DCC_ObjOutput>..\lib\$(Platform)</DCC_ObjOutput>
         <DCC_HppOutput>..\include\$(Platform)</DCC_HppOutput>
         <DCC_BpiOutput>..\lib\$(Platform)</DCC_BpiOutput>
-        <DCC_DcuOutput>..\lib\$(Platform)</DCC_DcuOutput>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
@@ -167,12 +165,12 @@
         <DCCReference Include="..\Source\ODE.Import.pas"/>
         <DCCReference Include="..\Source\ModuleLoader.pas"/>
         <DCCReference Include="..\Source\PhysX.Import.pas"/>
-        <DCCReference Include="..\Source\FMX\Physix.ODEManager.pas"/>
-        <DCCReference Include="..\Source\FMX\Physix.ODESkeletonColliders.pas"/>
-        <DCCReference Include="..\Source\FMX\Physix.ODEUtils.pas"/>
-        <DCCReference Include="..\Source\FMX\Physix.ODERagdoll.pas"/>
-        <DCCReference Include="..\Source\FMX\Physix.NGDManager.pas"/>
-        <DCCReference Include="..\Source\FMX\Physix.NGDRagdoll.pas"/>
+        <DCCReference Include="..\Source\Physix.ODEManager.pas"/>
+        <DCCReference Include="..\Source\Physix.ODESkeletonColliders.pas"/>
+        <DCCReference Include="..\Source\Physix.ODEUtils.pas"/>
+        <DCCReference Include="..\Source\Physix.ODERagdoll.pas"/>
+        <DCCReference Include="..\Source\Physix.NGDManager.pas"/>
+        <DCCReference Include="..\Source\Physix.NGDRagdoll.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -194,6 +192,10 @@
                     <Source Name="MainSource">GXScene_Physics_RT.dpk</Source>
                 </Source>
                 <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GBComps.bpl">Geoblock - Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GR32_DT.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GR32_DT.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GEdgeIO.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GEdgeIO.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GEdgeIODB.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GEdgeIODB.bpl not found</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcboffice2k280.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcbofficexp280.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>

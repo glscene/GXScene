@@ -38,7 +38,7 @@ requires
   GXScene_SDL_RT;
 
 contains
-  SDLx.Context in '..\Source\FMX\SDLx.Context.pas';
+  SDLx.Context in '..\Source\SDLx.Context.pas';
 
 end.
 

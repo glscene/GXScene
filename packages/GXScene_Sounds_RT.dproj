@@ -85,7 +85,6 @@
         <DCC_HppOutput>..\..\include\Win32</DCC_HppOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
-        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
@@ -123,7 +122,6 @@
         <DCC_CBuilderOutput>All</DCC_CBuilderOutput>
         <DCC_ImageBase>00400000</DCC_ImageBase>
         <SanitizedProjectName>GLScene_RunTime_FMX</SanitizedProjectName>
-        <DCC_DcuOutput>..\lib\$(Platform)</DCC_DcuOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -156,11 +154,11 @@
         </DelphiCompile>
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="GXScene_RT.dcp"/>
-        <DCCReference Include="..\Source\FMX\Soundx.FMOD.pas"/>
-        <DCCReference Include="..\Source\FMX\Soundx.SMFMOD.pas"/>
-        <DCCReference Include="..\Source\FMX\Soundx.SMOpenAL.pas"/>
-        <DCCReference Include="..\Source\FMX\Soundx.SMWaveOut.pas"/>
-        <DCCReference Include="..\Source\FMX\Soundx.SMBASS.pas"/>
+        <DCCReference Include="..\Source\Soundx.FMOD.pas"/>
+        <DCCReference Include="..\Source\Soundx.SMFMOD.pas"/>
+        <DCCReference Include="..\Source\Soundx.SMOpenAL.pas"/>
+        <DCCReference Include="..\Source\Soundx.SMWaveOut.pas"/>
+        <DCCReference Include="..\Source\Soundx.SMBASS.pas"/>
         <DCCReference Include="..\Source\FMOD.errors.pas"/>
         <DCCReference Include="..\Source\FMOD.Import.pas"/>
         <DCCReference Include="..\Source\FMOD.presets.pas"/>
@@ -204,12 +202,12 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libPCRE.dylib" Class="DependencyModule">
+                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libpcre.dylib" Class="DependencyModule">
                     <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libpcre.dylib" Class="DependencyModule">
+                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libPCRE.dylib" Class="DependencyModule">
                     <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
                     </Platform>

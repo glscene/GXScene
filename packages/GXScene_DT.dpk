@@ -36,21 +36,21 @@ requires
   GXScene_RT;
 
 contains
-  FMxGuiLayoutEditor in '..\Source\FMX\FMxGuiLayoutEditor.pas',
-  FMxInfo in '..\Source\FMX\FMxInfo.pas',
-  FRxTextureEdit in '..\Source\FMX\FRxTextureEdit.pas',
-  FMxXCollectionEditor in '..\Source\FMX\FMxXCollectionEditor.pas',
-  FMxLibMaterialPicker in '..\Source\FMX\FMxLibMaterialPicker.pas',
-  FRxMaterialPreview in '..\Source\FMX\FRxMaterialPreview.pas',
-  FRxFaceEditor in '..\Source\FMX\FRxFaceEditor.pas',
-  FRxColorEditor in '..\Source\FMX\FRxColorEditor.pas',
-  FMxPlugInManagerEditor in '..\Source\FMX\FMxPlugInManagerEditor.pas',
-  FMxMaterialEditor in '..\Source\FMX\FMxMaterialEditor.pas',
-  FMxShaderMemo in '..\Source\FMX\FMxShaderMemo.pas',
-  FMxShaderUniformEditor in '..\Source\FMX\FMxShaderUniformEditor.pas',
-  FMxSkinEditor in '..\Source\FMX\FMxSkinEditor.pas',
-  FMxSceneEditor in '..\Source\FMX\FMxSceneEditor.pas',
-  GLX.SceneRegister in '..\Source\FMX\GLX.SceneRegister.pas',
-  GLX.XCollectionRegister in '..\Source\FMX\GLX.XCollectionRegister.pas';
+  FMxGuiLayoutEditor in '..\Source\FMxGuiLayoutEditor.pas',
+  FMxInfo in '..\Source\FMxInfo.pas',
+  FRxTextureEdit in '..\Source\FRxTextureEdit.pas',
+  FMxXCollectionEditor in '..\Source\FMxXCollectionEditor.pas',
+  FMxLibMaterialPicker in '..\Source\FMxLibMaterialPicker.pas',
+  FRxMaterialPreview in '..\Source\FRxMaterialPreview.pas',
+  FRxFaceEditor in '..\Source\FRxFaceEditor.pas',
+  FRxColorEditor in '..\Source\FRxColorEditor.pas',
+  FMxPlugInManagerEditor in '..\Source\FMxPlugInManagerEditor.pas',
+  FMxMaterialEditor in '..\Source\FMxMaterialEditor.pas',
+  FMxShaderMemo in '..\Source\FMxShaderMemo.pas',
+  FMxShaderUniformEditor in '..\Source\FMxShaderUniformEditor.pas',
+  FMxSkinEditor in '..\Source\FMxSkinEditor.pas',
+  FMxSceneEditor in '..\Source\FMxSceneEditor.pas',
+  GLX.SceneRegister in '..\Source\GLX.SceneRegister.pas',
+  GLX.XCollectionRegister in '..\Source\GLX.XCollectionRegister.pas';
 
 end.

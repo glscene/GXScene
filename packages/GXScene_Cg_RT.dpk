@@ -36,8 +36,8 @@ requires
 contains
   Cg.Import in '..\Source\Cg.Import.pas',
   Cg.GL in '..\Source\Cg.GL.pas',
-  CGx.Shader in '..\Source\FMX\CGx.Shader.pas',
-  CGx.BombShader in '..\Source\FMX\CGx.BombShader.pas',
-  CGx.PostTransformationShader in '..\Source\FMX\CGx.PostTransformationShader.pas';
+  CGx.Shader in '..\Source\CGx.Shader.pas',
+  CGx.BombShader in '..\Source\CGx.BombShader.pas',
+  CGx.PostTransformationShader in '..\Source\CGx.PostTransformationShader.pas';
 
 end.

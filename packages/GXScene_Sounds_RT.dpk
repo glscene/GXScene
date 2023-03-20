@@ -34,11 +34,11 @@ requires
   GXScene_RT;
 
 contains
-  Soundx.FMOD in '..\Source\FMX\Soundx.FMOD.pas',
-  Soundx.SMFMOD in '..\Source\FMX\Soundx.SMFMOD.pas',
-  Soundx.SMOpenAL in '..\Source\FMX\Soundx.SMOpenAL.pas',
-  Soundx.SMWaveOut in '..\Source\FMX\Soundx.SMWaveOut.pas',
-  Soundx.SMBASS in '..\Source\FMX\Soundx.SMBASS.pas',
+  Soundx.FMOD in '..\Source\Soundx.FMOD.pas',
+  Soundx.SMFMOD in '..\Source\Soundx.SMFMOD.pas',
+  Soundx.SMOpenAL in '..\Source\Soundx.SMOpenAL.pas',
+  Soundx.SMWaveOut in '..\Source\Soundx.SMWaveOut.pas',
+  Soundx.SMBASS in '..\Source\Soundx.SMBASS.pas',
   FMOD.errors in '..\Source\FMOD.errors.pas',
   FMOD.Import in '..\Source\FMOD.Import.pas',
   FMOD.presets in '..\Source\FMOD.presets.pas',
