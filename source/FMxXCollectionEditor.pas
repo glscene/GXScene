@@ -30,10 +30,10 @@ uses
   FMX.Controls.Presentation,
   FMX.ListView,
 
-  GLX.Scene,
-  GLX.Strings,
-  GLX.Behaviours,
-  GLX.XCollection;
+  GXS.Scene,
+  GXS.Strings,
+  GXS.Behaviours,
+  GXS.XCollection;
 
 type
   IDesigner = interface //in designintf -> (IDesigner200)

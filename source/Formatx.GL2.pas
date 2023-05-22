@@ -14,8 +14,8 @@ uses
   System.Classes,
   System.SysUtils,
 
-  GLX.VectorGeometry,
-  GLX.VectorTypes;
+  GXS.VectorGeometry,
+  GXS.VectorTypes;
 
 type
   TGLMHeader = record

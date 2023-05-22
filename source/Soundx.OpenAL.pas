@@ -20,20 +20,22 @@ unit Soundx.OpenAL;
 
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
   System.Classes,
   System.SysUtils,
-  Vcl.Forms,
-  Vcl.Dialogs,
+  FMX.Forms,
+  FMX.Dialogs,
 
-  GLX.VectorTypes,
-  GLX.Scene,
-  GLX.VectorGeometry,
-  GLX.Coordinates,
-  GLX.Sound,
-  GLX.SoundFileObjects;
+  OpenALx.Import, //al, alut, alTypes
+
+  GXS.VectorTypes,
+  GXS.Scene,
+  GXS.VectorGeometry,
+  GXS.Coordinates,
+  GXS.Sound,
+  GXS.SoundFileObjects;
 
 type
 
@@ -64,9 +66,6 @@ type
 // ---------------------------------------------------------------------
 implementation
 // ---------------------------------------------------------------------
-
-uses
-  Sounds.OpenALImport {al, alut, alTypes};
 
 // checks for an error and raises an exception if necessary
 procedure CheckOpenALError;

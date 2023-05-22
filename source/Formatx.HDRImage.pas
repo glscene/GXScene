@@ -8,7 +8,7 @@ unit Formatx.HDRImage;
 *)
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
   Winapi.OpenGL,
@@ -17,8 +17,8 @@ uses
   System.SysUtils,
   FMX.Graphics,
 
-  GLX.VectorGeometry,
-  GLX.Graphics;
+  GXS.VectorGeometry,
+  GXS.Graphics;
 
 type
 
@@ -34,8 +34,8 @@ implementation
 //============================================================================
 
 uses
-  GLX.FileHDR,
-  GLX.TextureFormat;
+  GXS.FileHDR,
+  GXS.TextureFormat;
 
 // ------------------
 // ------------------ THDRImage ------------------

@@ -24,7 +24,7 @@ uses
   FMX.Edit,
 
   FRxColorEditor,
-  GLX.Material;
+  GXS.Material;
 
 type
   TFaceEditorFrame = class(TFrame)

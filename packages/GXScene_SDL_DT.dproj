@@ -94,7 +94,6 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="rtl.dcp"/>
-        <DCCReference Include="designide.dcp"/>
         <DCCReference Include="dmx.dcp"/>
         <DCCReference Include="fmximg.dcp"/>
         <DCCReference Include="GXScene_RT.dcp"/>

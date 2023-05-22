@@ -34,7 +34,7 @@ package GXScene_Physics_DT;
 
 requires
   rtl,
-  designide,
+///  designide,
   fmx,
   GXScene_RT;
 

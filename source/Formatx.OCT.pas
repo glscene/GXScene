@@ -7,16 +7,16 @@ unit Formatx.OCT;
 
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
   System.Classes,
   System.SysUtils,
 
-  GLX.VectorTypes,
-  GLX.VectorGeometry,
-  GLX.VectorLists,
-  GLX.MeshUtils;
+  GXS.VectorTypes,
+  GXS.VectorGeometry,
+  GXS.VectorLists,
+  GXS.MeshUtils;
 
 type
 

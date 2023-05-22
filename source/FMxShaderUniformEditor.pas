@@ -21,10 +21,10 @@ uses
   FMX.StdCtrls,
   FMX.Controls.Presentation,
 
-  GLXL.Parameter,
-  GLX.TextureFormat,
-  GLX.VectorGeometry,
-  GLX.Strings;
+  GXSL.Parameter,
+  GXS.TextureFormat,
+  GXS.VectorGeometry,
+  GXS.Strings;
 
 type
   TShaderUniformEditorForm = class(TForm)
@@ -163,9 +163,9 @@ begin
   for I := 0 to High(FUniformList) do
   begin
     if FUniformList[I].GLSLType <> GLSLTypeUndefined then
-      str := cGLSLTypeString[FUniformList[I].GLSLType];
+      str := cGLXLTypeString[FUniformList[I].GLSLType];
     if FUniformList[I].GLSLSamplerType <> GLSLSamplerUndefined then
-      str := cGLSLSamplerString[FUniformList[I].GLSLSamplerType];
+      str := cGLXLSamplerString[FUniformList[I].GLSLSamplerType];
     LBUniforms.Items.Add(FUniformList[I].Name+': '+string(str));
   end;
   ShowModal;
@@ -178,7 +178,7 @@ end;
 
 procedure TShaderUniformEditorForm.LBUniformsClick(Sender: TObject);
 var
-  SV: TSwizzleVector;
+  SV: TgxSwizzleVector;
   IParam: IgxShaderParameter;
 begin
   if LBUniforms.ItemIndex >= 0 then
@@ -244,7 +244,7 @@ end;
 
 procedure TShaderUniformEditorForm.ColorGroupClick(Sender: TObject);
 var
-  SV: TSwizzleVector;
+  SV: TgxSwizzleVector;
 begin
   if LBUniforms.ItemIndex >= 0 then
   begin

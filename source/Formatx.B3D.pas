@@ -7,16 +7,16 @@ unit Formatx.B3D;
 
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 {$R-}
 
 uses
   System.Classes,
   System.SysUtils,
 
-  GLX.VectorGeometry,
-  GLX.VectorTypes,
-  GLX.VectorLists;
+  GXS.VectorGeometry,
+  GXS.VectorTypes,
+  GXS.VectorLists;
 
 
 type

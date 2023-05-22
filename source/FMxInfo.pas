@@ -26,10 +26,10 @@ uses
   FMX.Objects,
   FMX.Memo.Types,
 
-  GLX.OpenGL,
-  GLX.Scene,
-  GLX.Context,
-  GLX.Strings;
+  GXS.OpenGL,
+  GXS.Scene,
+  GXS.Context,
+  GXS.Strings;
 
 type
   TInfoForm = class(TForm)

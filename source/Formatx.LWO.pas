@@ -205,14 +205,14 @@ Notes for improvement of this unit:
 
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
   System.Classes,
   System.SysUtils,
   System.IOUtils,
   System.Math,
-  GLX.VectorGeometry;
+  GXS.VectorGeometry;
 
 type
 

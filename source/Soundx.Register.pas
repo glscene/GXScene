@@ -10,10 +10,10 @@ interface
 uses
   System.Classes,
 
-  Soundx.SMBASS,
-  Soundx.SMFMOD,
-  Soundx.SMOpenAL,
-  Soundx.SMWaveOut;
+  Soundx.BASS,
+  Soundx.FMOD,
+  Soundx.OpenAL,
+  Soundx.WaveOut;
 
 procedure Register;
 
@@ -23,7 +23,7 @@ implementation
 
 procedure Register;
 begin
-  RegisterComponents('GXScene',[TgxSMBASS,TgxSMFMOD,TgxSMOpenAL,TgxSMWaveOut]);
+  RegisterComponents('GXScene',[TgxsmBASS,TgxsmFMOD,TgxsmOpenAL,TgxsmWaveOut]);
 end;
 
 end.

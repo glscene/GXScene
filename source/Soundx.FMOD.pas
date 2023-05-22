@@ -26,7 +26,7 @@ unit Soundx.FMOD;
 
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
   System.SysUtils,

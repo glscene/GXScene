@@ -155,16 +155,15 @@
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="GXScene_RT.dcp"/>
         <DCCReference Include="..\Source\Soundx.FMOD.pas"/>
-        <DCCReference Include="..\Source\Soundx.SMFMOD.pas"/>
-        <DCCReference Include="..\Source\Soundx.SMOpenAL.pas"/>
-        <DCCReference Include="..\Source\Soundx.SMWaveOut.pas"/>
-        <DCCReference Include="..\Source\Soundx.SMBASS.pas"/>
-        <DCCReference Include="..\Source\FMOD.errors.pas"/>
-        <DCCReference Include="..\Source\FMOD.Import.pas"/>
-        <DCCReference Include="..\Source\FMOD.presets.pas"/>
-        <DCCReference Include="..\Source\FMOD.types.pas"/>
-        <DCCReference Include="..\Source\BASS.Import.pas"/>
-        <DCCReference Include="..\Source\OpenAL.Import.pas"/>
+        <DCCReference Include="..\source\Soundx.BASS.pas"/>
+        <DCCReference Include="..\source\Soundx.OpenAL.pas"/>
+        <DCCReference Include="..\source\BASSx.Import.pas"/>
+        <DCCReference Include="..\source\FMODx.errors.pas"/>
+        <DCCReference Include="..\source\FMODx.Import.pas"/>
+        <DCCReference Include="..\source\FMODx.presets.pas"/>
+        <DCCReference Include="..\source\FMODx.types.pas"/>
+        <DCCReference Include="..\source\OpenALx.Import.pas"/>
+        <DCCReference Include="..\source\Soundx.WaveOut.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -202,12 +201,12 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libpcre.dylib" Class="DependencyModule">
+                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libPCRE.dylib" Class="DependencyModule">
                     <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libPCRE.dylib" Class="DependencyModule">
+                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libpcre.dylib" Class="DependencyModule">
                     <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
                     </Platform>

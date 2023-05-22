@@ -8,9 +8,9 @@ interface
 uses
   System.Classes,
   System.SysUtils,
-  GLX.VectorGeometry,
-  GLX.VectorTypes,
-  GLX.VectorFileObjects,
+  GXS.VectorGeometry,
+  GXS.VectorTypes,
+  GXS.VectorFileObjects,
   NGD.Import;
 
 type

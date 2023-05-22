@@ -7,7 +7,7 @@ unit Formatx.TGA;
 
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
   Winapi.OpenGL,
@@ -15,12 +15,12 @@ uses
   System.Classes,
   System.SysUtils,
 
-  GLX.ApplicationFileIO,
-  GLX.Strings,
+  GXS.ApplicationFileIO,
+  GXS.Strings,
 
-  GLX.Context,
-  GLX.Graphics,
-  GLX.TextureFormat;
+  GXS.Context,
+  GXS.Graphics,
+  GXS.TextureFormat;
 
 type
 
@@ -33,9 +33,9 @@ type
     class function Capabilities: TDataFileCapabilities; override;
     procedure AssignFromTexture(textureContext: TgxContext;
       const textureHandle: GLuint;
-      textureTarget: TGLTextureTarget;
+      textureTarget: TgxTextureTarget;
       const CurrentFormat: boolean;
-      const intFormat: TGLInternalFormat); reintroduce;
+      const intFormat: TgxInternalFormat); reintroduce;
   end;
 
 //======================================================================
@@ -270,8 +270,8 @@ begin
 end;
 
 procedure TgxTGAImage.AssignFromTexture(textureContext: TgxContext;
-  const textureHandle: GLuint; textureTarget: TGLTextureTarget;
-  const CurrentFormat: boolean; const intFormat: TGLInternalFormat);
+  const textureHandle: GLuint; textureTarget: TgxTextureTarget;
+  const CurrentFormat: boolean; const intFormat: TgxInternalFormat);
 begin
 {$MESSAGE Hint 'TgxTGAImage.AssignFromTexture not yet implemented' }
 end;

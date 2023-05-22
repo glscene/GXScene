@@ -77,7 +77,7 @@ unit Formatx.VFW;
 interface
 
 {.$UNDEF UNICODE}
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
     Winapi.Windows,

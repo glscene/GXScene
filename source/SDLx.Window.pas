@@ -14,17 +14,17 @@ unit SDLx.Window;
 
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
   System.Classes,
   System.SysUtils,
   System.SyncObjs,
 
-  GLX.OpenGL,
-  GLX.VectorTypes,
-  GLX.Context,
-  GLX.VectorGeometry,
+  GXS.OpenGL,
+  GXS.VectorTypes,
+  GXS.Context,
+  GXS.VectorGeometry,
   SDL.Import;
 
 type

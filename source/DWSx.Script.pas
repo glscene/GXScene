@@ -15,9 +15,9 @@ uses
   dwsExprs,
   dwsSymbols,
 
-  GLX.XCollection,
-  GLX.ScriptBase,
-  GLX.Manager;
+  GXS.XCollection,
+  GXS.ScriptBase,
+  GXS.Manager;
 
 type
   (*
@@ -32,7 +32,7 @@ type
   end;
 
   (* Implements DelphiWebScriptII scripting functionality through the
-    abstracted GLX.ScriptBase . *)
+    abstracted GXS.ScriptBase . *)
   TgxScriptDWS = class(TgxScriptBase)
   private
     FDWS2Program: TProgram;
@@ -167,7 +167,7 @@ end;
 
 class function TgxScriptDWS.FriendlyName: String;
 begin
-  Result := 'GLX.ScriptDWS';
+  Result := 'GXS.ScriptDWS';
 end;
 
 class function TgxScriptDWS.FriendlyDescription: String;

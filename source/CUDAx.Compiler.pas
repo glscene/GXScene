@@ -20,8 +20,8 @@ uses
   FMX.Forms,
   FMX.Dialogs,
 
-  GLX.ApplicationFileIO,
-  GLX.Strings,
+  GXS.ApplicationFileIO,
+  GXS.Strings,
   CUDA.Parser;
 
 type

@@ -35,15 +35,14 @@ requires
 
 contains
   Soundx.FMOD in '..\Source\Soundx.FMOD.pas',
-  Soundx.SMFMOD in '..\Source\Soundx.SMFMOD.pas',
-  Soundx.SMOpenAL in '..\Source\Soundx.SMOpenAL.pas',
-  Soundx.SMWaveOut in '..\Source\Soundx.SMWaveOut.pas',
-  Soundx.SMBASS in '..\Source\Soundx.SMBASS.pas',
-  FMOD.errors in '..\Source\FMOD.errors.pas',
-  FMOD.Import in '..\Source\FMOD.Import.pas',
-  FMOD.presets in '..\Source\FMOD.presets.pas',
-  FMOD.types in '..\Source\FMOD.types.pas',
-  BASS.Import in '..\Source\BASS.Import.pas',
-  OpenAL.Import in '..\Source\OpenAL.Import.pas';
+  Soundx.BASS in '..\source\Soundx.BASS.pas',
+  Soundx.OpenAL in '..\source\Soundx.OpenAL.pas',
+  BASSx.Import in '..\source\BASSx.Import.pas',
+  FMODx.errors in '..\source\FMODx.errors.pas',
+  FMODx.Import in '..\source\FMODx.Import.pas',
+  FMODx.presets in '..\source\FMODx.presets.pas',
+  FMODx.types in '..\source\FMODx.types.pas',
+  OpenALx.Import in '..\source\OpenALx.Import.pas',
+  Soundx.WaveOut in '..\source\Soundx.WaveOut.pas';
 
 end.

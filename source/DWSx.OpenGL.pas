@@ -8,7 +8,7 @@ unit DWSx.OpenGL;
 *)
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
   Winapi.OpenGL,
@@ -16,8 +16,8 @@ uses
   System.Classes,
   System.Variants,
   
-  GLX.Context,
-  GLX.VectorGeometry,
+  GXS.Context,
+  GXS.VectorGeometry,
   
   dwsExprs,
   dwsSymbols,
@@ -2026,7 +2026,7 @@ begin
   inherited;
   FUnitName := 'OpenGLx';
   FDependencies.Add('GLS.Context');
-  FDependencies.Add('GLX.VectorGeometry');
+  FDependencies.Add('GXS.VectorGeometry');
 end;
 
 procedure TGLPushAttrib.Execute;

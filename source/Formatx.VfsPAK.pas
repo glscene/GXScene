@@ -5,19 +5,19 @@ unit Formatx.VfsPAK;
 (*
   Support-code for loading files from Quake II PAK Files.
   When instance is created all LoadFromFile methods using
-  GLX.ApplicationFileIO mechanism will be pointed into PAK file.
+  GXS.ApplicationFileIO mechanism will be pointed into PAK file.
   You can change current PAK file by ActivePak variable.
 *)
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
   System.Classes,
   System.Contnrs,
   System.SysUtils,
-  GLX.ApplicationFileIO,
-  GLX.Strings;
+  GXS.ApplicationFileIO,
+  GXS.Strings;
 
 const
   SIGN = 'PACK'; // Signature for uncompressed - raw pak.

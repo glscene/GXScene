@@ -7,14 +7,14 @@ unit Formatx.VRML;
 
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
   System.Classes,
   System.SysUtils,
-  GLX.VectorTypes,
-  GLX.VectorLists,
-  GLX.Strings;
+  GXS.VectorTypes,
+  GXS.VectorLists,
+  GXS.Strings;
 
 type
   TVRMLNode = class

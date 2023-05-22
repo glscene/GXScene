@@ -8,21 +8,22 @@ interface
 uses
   Winapi.OpenGL,
   Winapi.OpenGLext,
+  System.SysUtils,
   System.Classes,
   FMX.Dialogs,
 
   CUDA.Import,
   CUDAx.API,
 
-  GLX.Context,
-  GLX.State,
-  GLX.Scene,
-  GLX.Graphics,
-  GLX.Material,
-  GLX.Texture,
-  GLXL.Shader,
-  GLXL.Parameter,
-  GLX.RenderContextInfo;
+  GXS.Context,
+  GXS.State,
+  GXS.Scene,
+  GXS.Graphics,
+  GXS.Material,
+  GXS.Texture,
+  GXSL.Shader,
+  GXSL.Parameter,
+  GXS.RenderContextInfo;
 
 type
 
@@ -82,7 +83,7 @@ type
     FPrimitiveType: TFeedBackMeshPrimitive;
     FVertexNumber: Integer;
     FElementNumber: Integer;
-    FShader: TgxGLSLShader;
+    FShader: TgxSLShader;
     FCommonFunc: TCUDAFunction;
     FLaunching: TFeedBackMeshLaunching;
     FBlend: Boolean;
@@ -90,7 +91,7 @@ type
     procedure SetPrimitiveType(AValue: TFeedBackMeshPrimitive);
     procedure SetVertexNumber(AValue: Integer);
     procedure SetElementNumber(AValue: Integer);
-    procedure SetShader(AShader: TgxGLSLShader);
+    procedure SetShader(AShader: TgxSLShader);
     procedure SetCommonFunc(AFunc: TCUDAFunction);
   protected
     procedure Notification(AComponent: TComponent;
@@ -100,8 +101,8 @@ type
     procedure LaunchKernels;
   protected
     property Attributes: TCUDAVertexAttributes read FAttributes write SetAttributes;
-    // GLSL shader as material. If it absent or disabled - nothing be drawen.
-    property Shader: TgxGLSLShader read FShader write SetShader;
+    // GXSL shader as material. If it absent or disabled - nothing be drawen.
+    property Shader: TgxSLShader read FShader write SetShader;
     // Primitive type.
     property PrimitiveType: TFeedBackMeshPrimitive read FPrimitiveType
       write SetPrimitiveType default fbmpPoint;
@@ -221,9 +222,8 @@ implementation
 //-----------------------------------------
 
 uses
-  System.SysUtils,
-  GLX.Strings,
-  GLX.TextureFormat;
+  GXS.Strings,
+  GXS.TextureFormat;
 
 
 // ------------------
@@ -1120,7 +1120,7 @@ begin
   FPrimitiveType := AValue;
 end;
 
-procedure TgxCustomFeedBackMesh.SetShader(AShader: TgxGLSLShader);
+procedure TgxCustomFeedBackMesh.SetShader(AShader: TgxslShader);
 begin
   if AShader <> FShader then
   begin

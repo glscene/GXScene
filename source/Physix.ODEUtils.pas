@@ -18,16 +18,16 @@ uses
   System.Classes,
 
   ODE.Import,
-  GLX.VectorGeometry,
-  GLX.VectorTypes,
-  GLX.VectorLists,
-  GLX.PersistentClasses,
-  GLX.Scene,
-  GLX.Context,
-  GLX.Coordinates,
-  GLX.Objects,
-  GLX.VerletClothify,
-  GLX.VectorFileObjects;
+  GXS.VectorGeometry,
+  GXS.VectorTypes,
+  GXS.VectorLists,
+  GXS.PersistentClasses,
+  GXS.Scene,
+  GXS.Context,
+  GXS.Coordinates,
+  GXS.Objects,
+  GXS.VerletClothify,
+  GXS.VectorFileObjects;
 
 procedure DrawBox(Sides: TdVector3);
 procedure setTransform(pos: TdVector3; R: TdMatrix3);

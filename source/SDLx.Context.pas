@@ -20,10 +20,10 @@ uses
   System.SysUtils,
 
   SDL.Import,
-  GLX.OpenGL,
-  GLX.XOpenGL,
-  GLX.Scene,
-  GLX.Context,
+  GXS.OpenGL,
+  GXS.XOpenGL,
+  GXS.Scene,
+  GXS.Context,
   SDLx.Window;
 
 type

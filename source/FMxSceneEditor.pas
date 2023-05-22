@@ -33,11 +33,11 @@ uses
 
   FMxInfo,
 
-  GLX.Scene,
-  GLX.SceneViewer,
-  GLX.SceneRegister,
-  GLX.Strings,
-  GLX.XCollection;
+  GXS.Scene,
+  GXS.SceneViewer,
+  GXS.SceneRegister,
+  GXS.Strings,
+  GXS.XCollection;
 
 type
   TSceneEditorForm = class(TForm)

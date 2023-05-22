@@ -17,7 +17,7 @@ unit Formatx.m3DS;
 
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 {$ALIGN ON}
 {$MINENUMSIZE 4}
 {$RANGECHECKS OFF}

@@ -9,7 +9,7 @@ unit Physix.ODEManager;
 *)
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
   Winapi.OpenGL,
@@ -17,23 +17,23 @@ uses
   System.SysUtils,
   System.Math,
 
-  GLX.XOpenGL,
-  GLX.XCollection,
-  GLX.VectorGeometry,
-  GLX.Manager,
+  GXS.XOpenGL,
+  GXS.XCollection,
+  GXS.VectorGeometry,
+  GXS.Manager,
 
-  GLX.Scene,
-  GLX.Texture,
-  GLX.Objects,
-  GLX.PersistentClasses,
-  GLX.VectorLists,
-  GLX.Color,
-  GLX.Coordinates,
-  GLX.RenderContextInfo,
-  GLX.State,
-  GLX.VectorTypes,
-  GLX.TerrainRenderer,
-  GLX.Graph,
+  GXS.Scene,
+  GXS.Texture,
+  GXS.Objects,
+  GXS.PersistentClasses,
+  GXS.VectorLists,
+  GXS.Color,
+  GXS.Coordinates,
+  GXS.RenderContextInfo,
+  GXS.State,
+  GXS.VectorTypes,
+  GXS.TerrainRenderer,
+  GXS.Graph,
 
   ODE.Import,
   Physix.ODEUtils;

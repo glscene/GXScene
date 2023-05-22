@@ -14,7 +14,7 @@ unit Formatx.DDSImage;
 *)
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
   Winapi.OpenGL,
@@ -24,11 +24,11 @@ uses
   FMX.Graphics,
   FMX.Types,
   
-  GLX.VectorGeometry,
-  GLX.Graphics,
-  GLX.Context,
-  GLX.TextureFormat,
-  GLX.FileDDS,
+  GXS.VectorGeometry,
+  GXS.Graphics,
+  GXS.Context,
+  GXS.TextureFormat,
+  GXS.FileDDS,
   Formatx.DXTC;
 
 

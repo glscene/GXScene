@@ -30,9 +30,9 @@ uses
   FRxFaceEditor,
   FRxTextureEdit,
 
-  GLX.Texture,
-  GLX.Material,
-  GLX.State;
+  GXS.Texture,
+  GXS.Material,
+  GXS.State;
 
 type
   TMaterialEditorForm = class(TForm)

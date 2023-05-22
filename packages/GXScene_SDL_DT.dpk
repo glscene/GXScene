@@ -31,7 +31,7 @@ package GXScene_SDL_DT;
 
 requires
   rtl,
-  designide,
+///  designide,
   dmx,
   fmximg,
   GXScene_RT,

@@ -31,7 +31,7 @@ package GXScene_Sounds_DT;
 
 requires
   rtl,
-  designide,
+///  designide,
   fmx,
   GXScene_RT,
   GXScene_Sounds_RT;

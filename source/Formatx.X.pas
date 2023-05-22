@@ -7,18 +7,18 @@ unit Formatx.X;
 
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
   System.Classes,
   System.SysUtils,
 
-  GLX.Strings,
+  GXS.Strings,
 
-  GLX.VectorTypes,
-  GLX.VectorGeometry,
-  GLX.VectorLists,
-  GLX.PersistentClasses;
+  GXS.VectorTypes,
+  GXS.VectorGeometry,
+  GXS.VectorLists,
+  GXS.PersistentClasses;
 
 type
   TDXNode = class;

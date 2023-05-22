@@ -27,7 +27,7 @@ uses
   FMX.SpinBox,
   FMX.Objects,
 
-  GLX.Gui, 
+  GXS.Gui, 
   FMX.Grid.Style, 
   FMX.ScrollBox;
 

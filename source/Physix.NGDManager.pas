@@ -11,7 +11,7 @@ unit Physix.NGDManager;
 
 interface
 
-{.$I GLX.Scene.inc}
+{.$I GXS.Scene.inc}
 
 uses
   System.Classes, // TComponent Tlist TWriter TReader TPersistent
@@ -20,20 +20,20 @@ uses
   System.Types,
 
   NGD.Import,
-  GLX.VectorTypes,
-  GLX.VectorGeometry, // PVector4f TVector4f TMatrix4f PMatrix4f NullHmgVector...
-  GLX.VectorLists, // TgxAffineVectorList for Tree
-  GLX.XCollection, // TXCollection file function
-  GLX.GeometryBB,
-  GLX.BaseClasses,
-  GLX.PersistentClasses,
-  GLX.Scene,
-  GLX.Manager,
-  GLX.Coordinates,
-  GLX.Objects,
-  GLX.GeomObjects,
-  GLX.VectorFileObjects, // cube cone freeform...
-  GLX.Color; // For show debug
+  GXS.VectorTypes,
+  GXS.VectorGeometry, // PVector4f TVector4f TMatrix4f PMatrix4f NullHmgVector...
+  GXS.VectorLists, // TgxAffineVectorList for Tree
+  GXS.XCollection, // TXCollection file function
+  GXS.GeometryBB,
+  GXS.BaseClasses,
+  GXS.PersistentClasses,
+  GXS.Scene,
+  GXS.Manager,
+  GXS.Coordinates,
+  GXS.Objects,
+  GXS.GeomObjects,
+  GXS.VectorFileObjects, // cube cone freeform...
+  GXS.Color; // For show debug
 
 type
   PdFloat = ^dFloat;

@@ -5,7 +5,7 @@ unit CUDAx.Context;
 
 interface
 
-{.$I GLX.Scene.inc}
+{.$I GXS.Scene.inc}
 
 uses
   System.Classes,
@@ -15,10 +15,10 @@ uses
   CUDA.Import,
   CUDA.RunTime,
 
-  GLX.Strings,
-  GLX.Generics,
-  GLX.BaseClasses,
-  GLX.Context;
+  GXS.Strings,
+  GXS.Generics,
+  GXS.BaseClasses,
+  GXS.Context;
 
 type
 

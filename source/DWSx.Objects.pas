@@ -13,10 +13,10 @@ uses
   System.Classes,
   System.SysUtils,
 
-  GLX.Scene,
-  GLX.XCollection,
-  GLX.BaseClasses,
-  GLX.Manager,
+  GXS.Scene,
+  GXS.XCollection,
+  GXS.BaseClasses,
+  GXS.Manager,
 
   DWSx.Script,
 

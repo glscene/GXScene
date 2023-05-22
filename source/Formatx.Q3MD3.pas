@@ -11,13 +11,13 @@ uses
   System.Classes,
   System.SysUtils,
 
-  GLX.VectorTypes,
-  GLX.VectorGeometry,
-  GLX.VectorLists,
-  GLX.ApplicationFileIO,
+  GXS.VectorTypes,
+  GXS.VectorGeometry,
+  GXS.VectorLists,
+  GXS.ApplicationFileIO,
 
-  GLX.VectorFileObjects,
-  GLX.Material,
+  GXS.VectorFileObjects,
+  GXS.Material,
   Formatx.MD3;
 
 type

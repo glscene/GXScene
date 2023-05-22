@@ -28,10 +28,10 @@ uses
   FMX.Edit,
   FMX.Controls3D,
 
-  GLX.BaseClasses,
-  GLX.Gui,
-  GLX.Texture,
-  GLX.Material;
+  GXS.BaseClasses,
+  GXS.Gui,
+  GXS.Texture,
+  GXS.Material;
 
 type
   TSkinEditorForm = class(TForm)

@@ -120,10 +120,9 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="rtl.dcp"/>
-        <DCCReference Include="designide.dcp"/>
         <DCCReference Include="fmx.dcp"/>
-        <DCCReference Include="GLXcene_GPU_RT.dcp"/>
-        <DCCReference Include="GLXcene_RT.dcp"/>
+        <DCCReference Include="GXScene_GPU_RT.dcp"/>
+        <DCCReference Include="GXScene_RT.dcp"/>
         <DCCReference Include="..\Source\GPU.ComputingRegister.pas"/>
         <DCCReference Include="..\Source\FMxCUDAEditor.pas"/>
         <RcCompile Include="..\resources\GXSceneGPU.rc">

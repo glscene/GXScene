@@ -7,19 +7,20 @@ unit CGx.Register;
 
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 
 uses
   System.Classes,
-//  DesignIntf,
-//  DesignEditors,
-//  FMXEditors,
+// ToDo
+///  DesignIntf,
+///  DesignEditors,
+///  FMXEditors,
 
-  GLX.Material,
+  GXS.Material,
 
   CGx.Import,
   CGx.GL,
-  GLX.SceneRegister,  // TgxLibMaterialNameProperty
+  GXS.SceneRegister,  // TgxLibMaterialNameProperty
   CGx.Shader,
   CGx.BombShader;
 

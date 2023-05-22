@@ -24,10 +24,10 @@ uses
   FMX.StdCtrls,
   FMX.ListBox,
   FMX.Controls.Presentation,
-  GLX.Graphics,
-  GLX.TextureFormat,
-  GLX.Texture,
-  GLX.TextureImageEditors;
+  GXS.Graphics,
+  GXS.TextureFormat,
+  GXS.Texture,
+  GXS.TextureImageEditors;
 
 type
   TTextureEditFrame = class(TFrame)

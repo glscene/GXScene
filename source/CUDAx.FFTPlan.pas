@@ -5,7 +5,7 @@ unit CUDAx.FFTPlan;
 
 interface
 
-{.$I GLX.Scene.inc}
+{.$I GXS.Scene.inc}
 
 uses
   System.Classes,
@@ -17,7 +17,7 @@ uses
 
   CUDAx.API,
   CUDAx.Context,
-  GLX.Strings;
+  GXS.Strings;
 
 type
 

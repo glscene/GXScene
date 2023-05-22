@@ -11,10 +11,10 @@ uses
   System.Classes,
 
   ODE.Import,
-  GLX.VectorTypes,
-  GLX.PersistentClasses,
-  GLX.VectorGeometry,
-  GLX.VectorFileObjects;
+  GXS.VectorTypes,
+  GXS.PersistentClasses,
+  GXS.VectorGeometry,
+  GXS.VectorFileObjects;
 
 type
 

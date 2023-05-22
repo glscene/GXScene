@@ -24,10 +24,10 @@ uses
   FMX.Controls.Presentation,
   FMX.Objects,
 
-  GLX.VectorTypes,
-  GLX.VectorGeometry,
-  GLX.Color,
-  GLX.Texture;
+  GXS.VectorTypes,
+  GXS.VectorGeometry,
+  GXS.Color,
+  GXS.Texture;
 
 type
   TColorEditorFrame = class(TFrame)

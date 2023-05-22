@@ -11,13 +11,13 @@ uses
   ODE.Import,
   Physix.ODEUtils,
 
-  GLX.VectorTypes,
-  GLX.VectorGeometry,
-  GLX.Ragdoll,
-  GLX.Scene,
-  GLX.Objects,
-  GLX.Texture,
-  GLX.VectorFileObjects;
+  GXS.VectorTypes,
+  GXS.VectorGeometry,
+  GXS.Ragdoll,
+  GXS.Scene,
+  GXS.Objects,
+  GXS.Texture,
+  GXS.VectorFileObjects;
 
 const
   cMaxContacts = 4;

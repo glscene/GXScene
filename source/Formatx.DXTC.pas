@@ -10,7 +10,7 @@ unit Formatx.DXTC;
 
 interface
 
-{$I GLX.Scene.inc}
+{$I GXS.Scene.inc}
 {$Z4}  // Minimum enum size = dword
 
 uses
@@ -18,7 +18,7 @@ uses
   Winapi.OpenGLext,
   System.SysUtils,
 
-  GLX.TextureFormat;
+  GXS.TextureFormat;
 
 const
   DDSD_CAPS = $00000001;
@@ -282,7 +282,7 @@ type
     ColorFlag: Cardinal;
     RBits, GBits, BBits, ABits: Cardinal;
     colorFormat: Cardinal;
-    TexFormat: TGLinternalFormat;
+    TexFormat: TgxInternalFormat;
     dType: Cardinal;
   end;
 
@@ -351,14 +351,14 @@ procedure flip_blocks_dxtc5(data: PGLubyte; numBlocks: Integer);
 procedure flip_dxt5_alpha(block: PDXT5AlphaBlock);
 
 function DDSHeaderToGLEnum(const DX9header: TDDSHeader; const DX11header: TDDS_HEADER_DXT10;
-  const useDX11: Boolean; out iFormat: TGLinternalFormat; out colorFormat: Cardinal;
+  const useDX11: Boolean; out iFormat: TgxInternalFormat; out colorFormat: Cardinal;
   out dataType: Cardinal; out bpe: Integer): Boolean;
 
 function GLEnumToDDSHeader(var DX9header: TDDSHeader; var DX11header: TDDS_HEADER_DXT10;
-  const useDX11: Boolean; const iFormat: TGLinternalFormat; const colorFormat: Cardinal;
+  const useDX11: Boolean; const iFormat: TgxInternalFormat; const colorFormat: Cardinal;
   const dataType: Cardinal; const bpe: Integer): Boolean;
 
-function FindDDSCompatibleDataFormat(const iFormat: TGLinternalFormat; out colorFormat: Cardinal;
+function FindDDSCompatibleDataFormat(const iFormat: TgxInternalFormat; out colorFormat: Cardinal;
   out dataType: Cardinal): Boolean;
 
 // --------------------------------------------------
@@ -810,7 +810,7 @@ begin
 end;
 
 function DDSHeaderToGLEnum(const DX9header: TDDSHeader; const DX11header: TDDS_HEADER_DXT10;
-  const useDX11: Boolean; out iFormat: TGLinternalFormat; out colorFormat: Cardinal;
+  const useDX11: Boolean; out iFormat: TgxInternalFormat; out colorFormat: Cardinal;
   out dataType: Cardinal; out bpe: Integer): Boolean;
 var
   i: Integer;
@@ -1082,7 +1082,7 @@ end;
 //-------------------------------------------------------------------------------------
 
 function GLEnumToDDSHeader(var DX9header: TDDSHeader; var DX11header: TDDS_HEADER_DXT10;
-  const useDX11: Boolean; const iFormat: TGLinternalFormat; const colorFormat: Cardinal;
+  const useDX11: Boolean; const iFormat: TgxInternalFormat; const colorFormat: Cardinal;
   const dataType: Cardinal; const bpe: Integer): Boolean;
 var
   i: Integer;
@@ -1218,7 +1218,7 @@ end;
 
 //---------------------------------------------------------------------------------------------
 
-function FindDDSCompatibleDataFormat(const iFormat: TGLinternalFormat; out colorFormat: Cardinal;
+function FindDDSCompatibleDataFormat(const iFormat: TgxInternalFormat; out colorFormat: Cardinal;
   out dataType: Cardinal): Boolean;
 var
   i: Integer;

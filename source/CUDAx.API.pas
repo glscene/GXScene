@@ -12,14 +12,14 @@ uses
   System.SysUtils,
   FMX.Dialogs,
 
-  GLX.PersistentClasses,
-  GLX.BaseClasses,
-  GLX.VectorGeometry,
-  GLX.VectorTypes,
-  GLX.VectorLists,
-  GLX.Strings,
-  GLX.Context,
-  GLX.Graphics,
+  GXS.PersistentClasses,
+  GXS.BaseClasses,
+  GXS.VectorGeometry,
+  GXS.VectorTypes,
+  GXS.VectorLists,
+  GXS.Strings,
+  GXS.Context,
+  GXS.Graphics,
 
   CUDA.Import,
   CUDA.Runtime,
@@ -30,7 +30,7 @@ uses
   CUDAx.Compiler,
   CUDAx.Context,
 
-  GLX.Utils;
+  GXS.Utils;
 
 type
 

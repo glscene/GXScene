@@ -16,7 +16,7 @@ unit Formatx.m3DSTypes;
 
 interface
 
-{.$I GLX.inc}
+{.$I GXS.inc}
 
 uses
    System.Classes, // for TStringList

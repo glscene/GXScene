@@ -6,7 +6,7 @@
         <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Package</AppType>
-        <FrameworkType>None</FrameworkType>
+        <FrameworkType>FMX</FrameworkType>
         <ProjectVersion>19.4</ProjectVersion>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
     </PropertyGroup>
@@ -152,7 +152,6 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="rtl.dcp"/>
-        <DCCReference Include="designide.dcp"/>
         <DCCReference Include="fmx.dcp"/>
         <DCCReference Include="GXScene_RT.dcp"/>
         <DCCReference Include="..\Source\FMxGuiLayoutEditor.pas"/>
@@ -163,20 +162,13 @@
         <DCCReference Include="..\Source\FRxMaterialPreview.pas"/>
         <DCCReference Include="..\Source\FRxFaceEditor.pas"/>
         <DCCReference Include="..\Source\FRxColorEditor.pas"/>
-        <DCCReference Include="..\Source\FMxPlugInManagerEditor.pas"/>
         <DCCReference Include="..\Source\FMxMaterialEditor.pas"/>
         <DCCReference Include="..\Source\FMxShaderMemo.pas"/>
         <DCCReference Include="..\Source\FMxShaderUniformEditor.pas"/>
         <DCCReference Include="..\Source\FMxSkinEditor.pas"/>
         <DCCReference Include="..\Source\FMxSceneEditor.pas"/>
-        <DCCReference Include="..\Source\GLX.SceneRegister.pas"/>
-        <DCCReference Include="..\Source\GLX.XCollectionRegister.pas"/>
-        <RcCompile Include="..\resources\GXScene.rc">
-            <Form>GXScene.res</Form>
-        </RcCompile>
-        <RcCompile Include="..\resources\GXSceneObjects.rc">
-            <Form>GXSceneObjects.res</Form>
-        </RcCompile>
+        <DCCReference Include="..\source\GXS.SceneRegister.pas"/>
+        <DCCReference Include="..\source\GXS.XCollectionRegister.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -198,8 +190,8 @@
                     <Source Name="MainSource">GXScene_DT.dpk</Source>
                 </Source>
                 <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GR32_DT.bpl">Graphics32 Design Time Package</Excluded_Packages>
                     <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GBComps.bpl">Geoblock - Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GR32_DT.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GR32_DT.bpl not found</Excluded_Packages>
                     <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GEdgeIO.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GEdgeIO.bpl not found</Excluded_Packages>
                     <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GEdgeIODB.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GEdgeIODB.bpl not found</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcboffice2k280.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>

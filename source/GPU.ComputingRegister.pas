@@ -19,7 +19,7 @@ uses
   STREDIT,
   }
 
-  GLX.Strings;
+  GXS.Strings;
 
 procedure Register;
 

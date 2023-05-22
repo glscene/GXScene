@@ -32,7 +32,7 @@ uses
   FMX.Controls.Presentation,
 
   FRxMaterialPreview,
-  GLX.Material;
+  GXS.Material;
 
 type
   TLibMaterialPicker = class(TForm)

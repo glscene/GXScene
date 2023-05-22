@@ -1,7 +1,7 @@
 ﻿//
 // The graphics engine GXScene https://github.com/glscene
 //
-unit OpenGLx.InitFMX;
+unit OpenGXS.InitFMX;
 
 (* OpenGL for Initialization in FMX *)
 
