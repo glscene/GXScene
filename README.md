@@ -6,4 +6,4 @@ with spatial objects for cross-platform applications on Win32/64, MacOS, iOS, An
 Additional support of CG, FMOD, BASS, ODE, NGD, CUDA/OpenCL, GR32, SDL is included
 as well as components for CUDA/OpenCL GPU computing. 
 
-GLScene Team
+GXScene Team
