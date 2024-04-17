@@ -11,8 +11,6 @@ unit GXSL.AsmShader;
 
 interface
 
-{$I GXS.Scene.inc}
-
 uses
   Winapi.OpenGL,
 

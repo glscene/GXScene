@@ -1,7 +1,7 @@
 //
 // The graphics engine GXScene https://github.com/glscene
 //
-unit FMxLibMaterialPicker;
+unit FMXLibMaterialPicker;
 
 (* Allows choosing a material in a material library *)
 

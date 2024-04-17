@@ -8,16 +8,16 @@ unit Physix.ODERagdoll;
 interface
 
 uses
-  ODE.Import,
-  Physix.ODEUtils,
-
   GXS.VectorTypes,
   GXS.VectorGeometry,
   GXS.Ragdoll,
   GXS.Scene,
   GXS.Objects,
   GXS.Texture,
-  GXS.VectorFileObjects;
+  GXS.VectorFileObjects,
+
+  ODEx.Import,
+  Physix.ODEUtils;
 
 const
   cMaxContacts = 4;

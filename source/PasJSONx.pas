@@ -47,7 +47,7 @@
   *                                                                            *
   ***************************************************************************** *)
 
-unit PasJSON;
+unit PasJSONx;
 
 {$ifdef fpc}
 {$mode delphi}
@@ -658,7 +658,7 @@ type
 implementation
 
 uses
-  PasDblStrUtils;
+  PasDblStrUtilsx;
 
 // 0 1 2 3 4 5 6 7 8 9 a b c d e f
 const { UTF8CharSteps:array[AnsiChar] of byte=(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,  // 0

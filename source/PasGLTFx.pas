@@ -46,7 +46,7 @@
   *    x86-64, ARM, ARM64, etc.).                                              *
   *                                                                            *
   ***************************************************************************** *)
-unit PasGLTF;
+unit PasGLTFx;
 {$ifdef fpc}
 {$mode delphi}
 {$ifdef cpui386}
@@ -308,7 +308,7 @@ uses
   System.SysUtils,
   System.Classes,
   System.Math,
-  PasJSON;
+  PasJSONx;
 
 type
   PPPasGLTFInt8 = ^PPasGLTFInt8;

@@ -47,15 +47,9 @@ unit ODEx.Import;
 
 interface
 
-// remove . from line below if you are using a generic ODE DLL
-{$DEFINE VanillaODE}
-{$IFNDEF VanillaODE}
-{$DEFINE PARODE}
-{$ENDIF}
-
 uses
-  System.Classes,
-  ModuleLoader;
+  GXS.ModuleLoader, // not compiled on rad 12.1 win64
+  System.Classes;
 
 const
 
@@ -2201,7 +2195,7 @@ begin
 end;
 
 var
-  vODEHandle: TModuleHandle;
+  vODEHandle: HINST; // was TModuleHandle;
 
 procedure GetODEClassIDs;
 begin

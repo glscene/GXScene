@@ -11,7 +11,7 @@ uses
   GXS.VectorGeometry,
   GXS.VectorTypes,
   GXS.VectorFileObjects,
-  NGD.Import;
+  NGDx.Import;
 
 type
   TNewtonRagdoll = class

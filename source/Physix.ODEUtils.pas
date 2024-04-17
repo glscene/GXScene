@@ -17,7 +17,6 @@ uses
   System.SysUtils,
   System.Classes,
 
-  ODE.Import,
   GXS.VectorGeometry,
   GXS.VectorTypes,
   GXS.VectorLists,
@@ -27,7 +26,9 @@ uses
   GXS.Coordinates,
   GXS.Objects,
   GXS.VerletClothify,
-  GXS.VectorFileObjects;
+  GXS.VectorFileObjects,
+
+  ODEx.Import;
 
 procedure DrawBox(Sides: TdVector3);
 procedure setTransform(pos: TdVector3; R: TdMatrix3);

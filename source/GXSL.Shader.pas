@@ -26,14 +26,14 @@ uses
   GXSL.Parameter;
 
 type
-  TgxslShaderParameter = class;
-  TgxslCustomShader = class;
-  EgxslShaderException = class(ECustomShaderException);
+  TGXSLShaderParameter = class;
+  TGXSLCustomShader = class;
+  EGXSLShaderException = class(ECustomShaderException);
 
-  TgxslShaderEvent = procedure(Shader: TgxslCustomShader) of object;
-  TgxslShaderUnApplyEvent = procedure(Shader: TgxslCustomShader;
+  TGXSLShaderEvent = procedure(Shader: TGXSLCustomShader) of object;
+  TGXSLShaderUnApplyEvent = procedure(Shader: TGXSLCustomShader;
                                      var ThereAreMorePasses: Boolean) of object;
-  TgxslShaderEventEx = procedure(Shader: TgxslCustomShader;
+  TGXSLShaderEventEx = procedure(Shader: TGXSLCustomShader;
     Sender: TObject) of object;
 
   TgxActiveAttrib = record
@@ -45,28 +45,28 @@ type
 
   TgxActiveAttribArray = array of TgxActiveAttrib;
 
-  TgxslCustomShader = class(TgxCustomShader)
+  TGXSLCustomShader = class(TgxCustomShader)
   private
     FGXSLProg: TgxProgramHandle;
-    FParam: TgxslShaderParameter;
+    FParam: TGXSLShaderParameter;
     FActiveVarying: TStrings;
     FTransformFeedBackMode: TgxTransformFeedBackMode;
-    FOnInitialize: TgxslShaderEvent;
-    FOnApply: TgxslShaderEvent;
-    FOnUnApply: TgxslShaderUnApplyEvent;
-    FOnInitializeEx: TgxslShaderEventEx;
-    FOnApplyEx: TgxslShaderEventEx;
-    function GetParam(const Index: string): TgxslShaderParameter;
-    function GetDirectParam(const Index: Cardinal): TgxslShaderParameter;
+    FOnInitialize: TGXSLShaderEvent;
+    FOnApply: TGXSLShaderEvent;
+    FOnUnApply: TGXSLShaderUnApplyEvent;
+    FOnInitializeEx: TGXSLShaderEventEx;
+    FOnApplyEx: TGXSLShaderEventEx;
+    function GetParam(const Index: string): TGXSLShaderParameter;
+    function GetDirectParam(const Index: Cardinal): TGXSLShaderParameter;
     procedure OnChangeActiveVarying(Sender: TObject);
   protected
-    property OnApply: TgxslShaderEvent read FOnApply write FOnApply;
-    property OnUnApply: TgxslShaderUnApplyEvent read FOnUnApply write FOnUnApply;
-    property OnInitialize: TgxslShaderEvent read FOnInitialize write FOnInitialize;
-    property OnInitializeEx: TgxslShaderEventEx read FOnInitializeEx write FOnInitializeEx;
-    property OnApplyEx: TgxslShaderEventEx read FOnApplyEx write FOnApplyEx;
+    property OnApply: TGXSLShaderEvent read FOnApply write FOnApply;
+    property OnUnApply: TGXSLShaderUnApplyEvent read FOnUnApply write FOnUnApply;
+    property OnInitialize: TGXSLShaderEvent read FOnInitialize write FOnInitialize;
+    property OnInitializeEx: TGXSLShaderEventEx read FOnInitializeEx write FOnInitializeEx;
+    property OnApplyEx: TGXSLShaderEventEx read FOnApplyEx write FOnApplyEx;
     function GetGXSLProg: TgxProgramHandle; virtual;
-    function GetCurrentParam: TgxslShaderParameter; virtual;
+    function GetCurrentParam: TGXSLShaderParameter; virtual;
     procedure SetActiveVarying(const Value: TStrings);
     procedure SetTransformFeedBackMode(const Value: TgxTransformFeedBackMode);
     procedure DoInitialize(var rci: TgxRenderContextInfo; Sender: TObject); override;
@@ -79,14 +79,14 @@ type
     procedure Assign(Source: TPersistent); override;
     function ShaderSupported: Boolean; override;
     function GetActiveAttribs: TgxActiveAttribArray;
-    property Param[const Index: string]: TgxslShaderParameter read GetParam;
-    property DirectParam[const Index: Cardinal]: TgxslShaderParameter read GetDirectParam;
+    property Param[const Index: string]: TGXSLShaderParameter read GetParam;
+    property DirectParam[const Index: Cardinal]: TGXSLShaderParameter read GetDirectParam;
     property ActiveVarying: TStrings read FActiveVarying write SetActiveVarying;
     property TransformFeedBackMode: TgxTransformFeedBackMode read FTransformFeedBackMode write SetTransformFeedBackMode default tfbmInterleaved;
   end;
 
   // Wrapper around a parameter of a GLSL program.
-  TgxslShaderParameter = class(TgxCustomShaderParameter)
+  TGXSLShaderParameter = class(TgxCustomShaderParameter)
   private
     FGXSLProg: TgxProgramHandle;
     FParameterID: Integer;
@@ -131,7 +131,7 @@ type
      // Nothing here ...yet.
    end;
 
-  TgxslShader = class(TgxslCustomShader)
+  TGXSLShader = class(TGXSLCustomShader)
   published
     property FragmentProgram;
     property VertexProgram;
@@ -156,10 +156,10 @@ uses
   GXS.State;
 
 //---------------------------------
-// TgxslCustomShader
+// TGXSLCustomShader
 //---------------------------------
 
-procedure TgxslCustomShader.DoApply(var rci: TgxRenderContextInfo; Sender: TObject);
+procedure TGXSLCustomShader.DoApply(var rci: TgxRenderContextInfo; Sender: TObject);
 begin
   FGXSLProg.UseProgramObject;
   if Assigned(FOnApply) then
@@ -168,7 +168,7 @@ begin
     FOnApplyEx(Self, Sender);
 end;
 
-procedure TgxslCustomShader.DoInitialize(var rci: TgxRenderContextInfo; Sender: TObject);
+procedure TGXSLCustomShader.DoInitialize(var rci: TgxRenderContextInfo; Sender: TObject);
 const
   cBufferMode: array[tfbmInterleaved..tfbmSeparate] of GLenum = (
     GL_INTERLEAVED_ATTRIBS_EXT, GL_SEPARATE_ATTRIBS_EXT);
@@ -227,7 +227,7 @@ begin
           end;
 
           if (not FGXSLProg.LinkProgram) then
-            raise EgxslShaderException.Create(FGXSLProg.InfoLog);
+            raise eGXSLShaderException.Create(FGXSLProg.InfoLog);
         end;
         FGXSLProg.NotifyDataUpdated;
       end;
@@ -255,7 +255,7 @@ begin
         FGXSLProg.EndUseProgramObject;
       end;
       if (not FGXSLProg.ValidateProgram) then
-        raise EgxslShaderException.Create(FGXSLProg.InfoLog);
+        raise eGXSLShaderException.Create(FGXSLProg.InfoLog);
     except
       on E: Exception do
       begin
@@ -267,7 +267,7 @@ begin
 end;
 
 
-function TgxslCustomShader.DoUnApply(var rci: TgxRenderContextInfo): Boolean;
+function TGXSLCustomShader.DoUnApply(var rci: TgxRenderContextInfo): Boolean;
 begin
   Result := False;
   if Assigned(FOnUnApply) then
@@ -276,13 +276,13 @@ begin
     FGXSLProg.EndUseProgramObject;
 end;
 
-function TgxslCustomShader.ShaderSupported: Boolean;
+function TGXSLCustomShader.ShaderSupported: Boolean;
 begin
   Result := True; (*  (GL_ARB_shader_objects and GL_ARB_vertex_program and
              GL_ARB_vertex_shader and GL_ARB_fragment_shader); *)
 end;
 
-function TgxslCustomShader.GetActiveAttribs: TgxActiveAttribArray;
+function TGXSLCustomShader.GetActiveAttribs: TgxActiveAttribArray;
 var
   LRci: TgxRenderContextInfo;
   i, j: Integer;
@@ -336,59 +336,59 @@ begin
   SetLength(Result, j);
 end;
 
-procedure TgxslCustomShader.Assign(Source: TPersistent);
+procedure TGXSLCustomShader.Assign(Source: TPersistent);
 begin
   inherited Assign(Source);
 
-  if Source is TgxslCustomShader then
+  if Source is TGXSLCustomShader then
   begin
     FreeAndNil(FGXSLProg); //just free the handle for it to be recreated on next initialization
   end;
 end;
 
-procedure TgxslCustomShader.DoFinalize;
+procedure TGXSLCustomShader.DoFinalize;
 begin
   inherited;
   if Assigned(FGXSLProg) then
     FGXSLProg.NotifyChangesOfData;
 end;
 
-function TgxslCustomShader.GetGXSLProg: TgxProgramHandle;
+function TGXSLCustomShader.GetGXSLProg: TgxProgramHandle;
 begin
   Result := FGXSLProg;
 end;
 
-function TgxslCustomShader.GetParam(
-  const Index: string): TgxslShaderParameter;
+function TGXSLCustomShader.GetParam(
+  const Index: string): TGXSLShaderParameter;
 begin
   FParam.FParameterID := FGXSLProg.GetUniformLocation(Index);
   Result := FParam;
 end;
 
-function TgxslCustomShader.GetDirectParam(
-  const Index: Cardinal): TgxslShaderParameter;
+function TGXSLCustomShader.GetDirectParam(
+  const Index: Cardinal): TGXSLShaderParameter;
 begin
   FParam.FParameterID := Index;
   Result := FParam;
 end;
 
-function TgxslCustomShader.GetCurrentParam: TgxslShaderParameter;
+function TGXSLCustomShader.GetCurrentParam: TGXSLShaderParameter;
 begin
   Result := FParam;
 end;
 
-constructor TgxslCustomShader.Create(AOwner: TComponent);
+constructor TGXSLCustomShader.Create(AOwner: TComponent);
 begin
   inherited;
   FGXSLProg := TgxProgramHandle.Create;
-  FParam := TgxslShaderParameter.Create;
+  FParam := TGXSLShaderParameter.Create;
   FParam.FGXSLProg := FGXSLProg;
   FActiveVarying := TStringList.Create;
   TStringList(FActiveVarying).OnChange := OnChangeActiveVarying;
   FTransformFeedBackMode := tfbmInterleaved;
 end;
 
-destructor TgxslCustomShader.Destroy;
+destructor TGXSLCustomShader.Destroy;
 begin
   FreeAndNil(FGXSLProg);
   FreeAndNil(FParam);
@@ -396,13 +396,13 @@ begin
   inherited;
 end;
 
-procedure TgxslCustomShader.SetActiveVarying(const Value: TStrings);
+procedure TGXSLCustomShader.SetActiveVarying(const Value: TStrings);
 begin
   FActiveVarying.Assign(Value);
   NotifyChange(Self);
 end;
 
-procedure TgxslCustomShader.SetTransformFeedBackMode(const Value: TgxTransformFeedBackMode);
+procedure TGXSLCustomShader.SetTransformFeedBackMode(const Value: TgxTransformFeedBackMode);
 begin
   if Value <> FTransformFeedBackMode then
   begin
@@ -411,77 +411,77 @@ begin
   end;
 end;
 
-procedure TgxslCustomShader.OnChangeActiveVarying(Sender: TObject);
+procedure TGXSLCustomShader.OnChangeActiveVarying(Sender: TObject);
 begin
   NotifyChange(Self);
 end;
 
 //------------------------------------------------------------
-// TgxslShaderParameter
+// TGXSLShaderParameter
 //------------------------------------------------------------
 
-function TgxslShaderParameter.GetAsCustomTexture(
+function TGXSLShaderParameter.GetAsCustomTexture(
   const TextureIndex: Integer; TextureTarget: TgxTextureTarget): Cardinal;
 begin
   glGetUniformiv(FGXSLProg.Handle, TextureIndex, @Result);
 end;
 
-function TgxslShaderParameter.GetAsMatrix2f: TMatrix2f;
+function TGXSLShaderParameter.GetAsMatrix2f: TMatrix2f;
 begin
   glGetUniformfv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-function TgxslShaderParameter.GetAsMatrix3f: TMatrix3f;
+function TGXSLShaderParameter.GetAsMatrix3f: TMatrix3f;
 begin
   glGetUniformfv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-function TgxslShaderParameter.GetAsMatrix4f: TMatrix4f;
+function TGXSLShaderParameter.GetAsMatrix4f: TMatrix4f;
 begin
   glGetUniformfv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-function TgxslShaderParameter.GetAsVector1f: Single;
+function TGXSLShaderParameter.GetAsVector1f: Single;
 begin
   glGetUniformfv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-function TgxslShaderParameter.GetAsVector1i: Integer;
+function TGXSLShaderParameter.GetAsVector1i: Integer;
 begin
   glGetUniformiv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-function TgxslShaderParameter.GetAsVector2f: TVector2f;
+function TGXSLShaderParameter.GetAsVector2f: TVector2f;
 begin
   glGetUniformfv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-function TgxslShaderParameter.GetAsVector2i: TVector2i;
+function TGXSLShaderParameter.GetAsVector2i: TVector2i;
 begin
   glGetUniformiv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-function TgxslShaderParameter.GetAsVector3f: TVector3f;
+function TGXSLShaderParameter.GetAsVector3f: TVector3f;
 begin
   glGetUniformfv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-function TgxslShaderParameter.GetAsVector3i: TVector3i;
+function TGXSLShaderParameter.GetAsVector3i: TVector3i;
 begin
   glGetUniformiv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-function TgxslShaderParameter.GetAsVector4f: TVector4f;
+function TGXSLShaderParameter.GetAsVector4f: TVector4f;
 begin
   glGetUniformfv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-function TgxslShaderParameter.GetAsVector4i: TVector4i;
+function TGXSLShaderParameter.GetAsVector4i: TVector4i;
 begin
   glGetUniformiv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-procedure TgxslShaderParameter.SetAsCustomTexture(
+procedure TGXSLShaderParameter.SetAsCustomTexture(
   const TextureIndex: Integer; TextureTarget: TgxTextureTarget;
   const Value: Cardinal);
 begin
@@ -489,107 +489,107 @@ begin
   glUniform1i(FParameterID, TextureIndex);
 end;
 
-procedure TgxslShaderParameter.SetAsMatrix2f(const Value: TMatrix2f);
+procedure TGXSLShaderParameter.SetAsMatrix2f(const Value: TMatrix2f);
 begin
   glUniformMatrix2fv(FParameterID, 1, 1, @Value);
 end;
 
-procedure TgxslShaderParameter.SetAsMatrix3f(const Value: TMatrix3f);
+procedure TGXSLShaderParameter.SetAsMatrix3f(const Value: TMatrix3f);
 begin
   glUniformMatrix3fv(FParameterID, 1, 1, @Value);
 end;
 
-procedure TgxslShaderParameter.SetAsMatrix4f(const Value: TMatrix4f);
+procedure TGXSLShaderParameter.SetAsMatrix4f(const Value: TMatrix4f);
 begin
   glUniformMatrix4fv(FParameterID, 1, 1, @Value);
 end;
 
-procedure TgxslShaderParameter.SetAsVector1f(const Value: Single);
+procedure TGXSLShaderParameter.SetAsVector1f(const Value: Single);
 begin
   glUniform1f(FParameterID, Value);
 end;
 
-procedure TgxslShaderParameter.SetAsVector1i(const Value: Integer);
+procedure TGXSLShaderParameter.SetAsVector1i(const Value: Integer);
 begin
   glUniform1i(FParameterID, Value);
 end;
 
-procedure TgxslShaderParameter.SetAsVector2f(const Value: TVector2f);
+procedure TGXSLShaderParameter.SetAsVector2f(const Value: TVector2f);
 begin
   glUniform2f(FParameterID, Value.X, Value.Y);
 end;
 
-procedure TgxslShaderParameter.SetAsVector2i(const Value: TVector2i);
+procedure TGXSLShaderParameter.SetAsVector2i(const Value: TVector2i);
 begin
   glUniform2i(FParameterID, Value.X, Value.Y);
 end;
 
-procedure TgxslShaderParameter.SetAsVector3f(const Value: TVector3f);
+procedure TGXSLShaderParameter.SetAsVector3f(const Value: TVector3f);
 begin
   glUniform3f(FParameterID, Value.X, Value.Y, Value.Z);
 end;
 
-procedure TgxslShaderParameter.SetAsVector3i(const Value: TVector3i);
+procedure TGXSLShaderParameter.SetAsVector3i(const Value: TVector3i);
 begin
   glUniform3i(FParameterID, Value.X, Value.Y, Value.Z);
 end;
 
-procedure TgxslShaderParameter.SetAsVector4f(const Value: TVector4f);
+procedure TGXSLShaderParameter.SetAsVector4f(const Value: TVector4f);
 begin
   glUniform4f(FParameterID, Value.X, Value.Y, Value.Z, Value.W);
 end;
 
-procedure TgxslShaderParameter.SetAsVector4i(const Value: TVector4i);
+procedure TGXSLShaderParameter.SetAsVector4i(const Value: TVector4i);
 begin
   glUniform4i(FParameterID, Value.X, Value.Y, Value.Z, Value.W);
 end;
 
-function TgxslShaderParameter.GetAsUniformBuffer: GLenum;
+function TGXSLShaderParameter.GetAsUniformBuffer: GLenum;
 begin
   glGetUniformiv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-function TgxslShaderParameter.GetAsVector1ui: GLuint;
+function TGXSLShaderParameter.GetAsVector1ui: GLuint;
 begin
   glGetUniformuiv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-procedure TgxslShaderParameter.SetAsVector1ui(const Value: GLuint);
+procedure TGXSLShaderParameter.SetAsVector1ui(const Value: GLuint);
 begin
   glUniform1ui(FParameterID, Value);
 end;
 
-function TgxslShaderParameter.GetAsVector2ui: TVector2ui;
+function TGXSLShaderParameter.GetAsVector2ui: TVector2ui;
 begin
   glGetUniformiv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-procedure TgxslShaderParameter.SetAsVector2ui(const Value: TVector2ui);
+procedure TGXSLShaderParameter.SetAsVector2ui(const Value: TVector2ui);
 begin
   glUniform2ui(FParameterID, Value.X, Value.Y);
 end;
 
-function TgxslShaderParameter.GetAsVector3ui: TVector3ui;
+function TGXSLShaderParameter.GetAsVector3ui: TVector3ui;
 begin
   glGetUniformiv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-procedure TgxslShaderParameter.SetAsVector3ui(const Value: TVector3ui);
+procedure TGXSLShaderParameter.SetAsVector3ui(const Value: TVector3ui);
 begin
   glUniform3ui(FParameterID, Value.X, Value.Y, Value.Z);
 end;
 
-function TgxslShaderParameter.GetAsVector4ui: TVector4ui;
+function TGXSLShaderParameter.GetAsVector4ui: TVector4ui;
 begin
   glGetUniformiv(FGXSLProg.Handle, FParameterID, @Result);
 end;
 
-procedure TgxslShaderParameter.SetAsVector4ui(const Value: TVector4ui);
+procedure TGXSLShaderParameter.SetAsVector4ui(const Value: TVector4ui);
 begin
   glUniform4ui(FParameterID, Value.X, Value.Y, Value.Z, Value.W);
 end;
 
-procedure TgxslShaderParameter.SetAsUniformBuffer(UBO: Cardinal);
+procedure TGXSLShaderParameter.SetAsUniformBuffer(UBO: Cardinal);
 begin
   CurrentContext.gxStates.UniformBufferBinding := UBO;
   glUniformBufferEXT(FGXSLProg.Handle, FParameterID, UBO);
@@ -599,6 +599,6 @@ end;
 initialization
 //=======================================================
 
-  RegisterClasses([TgxslCustomShader, TgxslShader]);
+  RegisterClasses([TGXSLCustomShader, TGXSLShader]);
 
 end.

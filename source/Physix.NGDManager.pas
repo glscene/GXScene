@@ -11,15 +11,12 @@ unit Physix.NGDManager;
 
 interface
 
-{.$I GXS.Scene.inc}
-
 uses
   System.Classes, // TComponent Tlist TWriter TReader TPersistent
   System.SysUtils, // System utilities
   System.Math, // Samevalue isZero to compare single
   System.Types,
 
-  NGD.Import,
   GXS.VectorTypes,
   GXS.VectorGeometry, // PVector4f TVector4f TMatrix4f PMatrix4f NullHmgVector...
   GXS.VectorLists, // TgxAffineVectorList for Tree
@@ -33,7 +30,9 @@ uses
   GXS.Objects,
   GXS.GeomObjects,
   GXS.VectorFileObjects, // cube cone freeform...
-  GXS.Color; // For show debug
+  GXS.Color, // For show debug
+
+  NGDx.Import;
 
 type
   PdFloat = ^dFloat;

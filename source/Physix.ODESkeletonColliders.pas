@@ -10,7 +10,7 @@ interface
 uses
   System.Classes,
 
-  ODE.Import,
+  ODEx.Import,
   GXS.VectorTypes,
   GXS.PersistentClasses,
   GXS.VectorGeometry,

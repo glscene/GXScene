@@ -1,7 +1,7 @@
 //
 // The graphics engine GXScene https://github.com/glscene
 //
-unit ModuleLoader;
+unit GXS.ModuleLoader;
 
 {******************************************************************}
 {                                                                  }

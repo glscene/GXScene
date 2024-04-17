@@ -1,5 +1,5 @@
 //
-// The graphics rendering engine GXScene  http://glscene.org
+// The graphics engine GXScene https://github.com/glscene
 //
 package GXScene_Physics_RT;
 
@@ -38,17 +38,17 @@ requires
   GXScene_RT;
 
 contains
-  Newton.Import in '..\Source\Newton.Import.pas',
-  NGD.Import in '..\Source\NGD.Import.pas',
-  ODE.Import in '..\Source\ODE.Import.pas',
-  ModuleLoader in '..\Source\ModuleLoader.pas',
-  PhysX.Import in '..\Source\PhysX.Import.pas',
-  Physix.ODEManager in '..\Source\Physix.ODEManager.pas',
-  Physix.ODESkeletonColliders in '..\Source\Physix.ODESkeletonColliders.pas',
-  Physix.ODEUtils in '..\Source\Physix.ODEUtils.pas',
-  Physix.ODERagdoll in '..\Source\Physix.ODERagdoll.pas',
   Physix.NGDManager in '..\Source\Physix.NGDManager.pas',
-  Physix.NGDRagdoll in '..\Source\Physix.NGDRagdoll.pas';
+  Physix.NGDRagdoll in '..\Source\Physix.NGDRagdoll.pas',
+  NGDx.Import in '..\source\NGDx.Import.pas',
+  PhysX.Import in '..\source\PhysX.Import.pas',
+  Newtonx.Import in '..\source\Newtonx.Import.pas',
+  ODEx.Import in '..\source\ODEx.Import.pas',
+  Physix.ODEManager in '..\source\Physix.ODEManager.pas',
+  Physix.ODERagdoll in '..\source\Physix.ODERagdoll.pas',
+  Physix.ODERegister in '..\source\Physix.ODERegister.pas',
+  Physix.ODESkeletonColliders in '..\source\Physix.ODESkeletonColliders.pas',
+  Physix.ODEUtils in '..\source\Physix.ODEUtils.pas';
 
 end.
 

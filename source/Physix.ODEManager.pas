@@ -9,8 +9,6 @@ unit Physix.ODEManager;
 *)
 interface
 
-{$I GXS.Scene.inc}
-
 uses
   Winapi.OpenGL,
   System.Classes,
@@ -35,7 +33,7 @@ uses
   GXS.TerrainRenderer,
   GXS.Graph,
 
-  ODE.Import,
+  ODEx.Import,
   Physix.ODEUtils;
 
 type

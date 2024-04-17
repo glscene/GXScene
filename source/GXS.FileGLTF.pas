@@ -1,9 +1,12 @@
 //
-// The graphics rendering engine GLScene http://glscene.org
+// The graphics engine GXScene https://github.com/glscene
 //
 unit GXS.FileGLTF;
 
-(* glTF/GLB formats implementation. *)
+(*
+  glTF/GLB formats implementation.
+  not yet implemented.
+*)
 
 interface
 
@@ -18,9 +21,9 @@ uses
   GXS.VectorTypes,
   GXS.VectorLists,
   GXS.VectorGeometry,
-  GXS.Material,
 
-  PasGLTF;
+  PasGLTFx,
+  GXS.Material;
 
 type
   (* The glTF format is a runtime asset delivery format

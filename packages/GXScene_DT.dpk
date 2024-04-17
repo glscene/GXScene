@@ -35,8 +35,8 @@ requires
   GXScene_RT;
 
 contains
-  FMxGuiLayoutEditor in '..\Source\FMxGuiLayoutEditor.pas',
-  FMxInfo in '..\Source\FMxInfo.pas',
+  FMxGuiLayoutEditor in '..\source\FMxGuiLayoutEditor.pas',
+  FMxInfo in '..\source\FMxInfo.pas',
   FRxTextureEdit in '..\Source\FRxTextureEdit.pas',
   FMxXCollectionEditor in '..\Source\FMxXCollectionEditor.pas',
   FMxLibMaterialPicker in '..\Source\FMxLibMaterialPicker.pas',

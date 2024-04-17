@@ -1,0 +1,96 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A07049C7-16A5-409B-BB6C-8141046B11CB}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="packages\GXScene_RT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="D:\GLScene\Packages\GLScene_Sounds_RT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="packages\GXScene_Physics_RT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="packages\GXScene_Cg_RT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="packages\GXScene_GPU_RT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="packages\GXScene_DT.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="GXScene_RT">
+        <MSBuild Projects="packages\GXScene_RT.dproj"/>
+    </Target>
+    <Target Name="GXScene_RT:Clean">
+        <MSBuild Projects="packages\GXScene_RT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GXScene_RT:Make">
+        <MSBuild Projects="packages\GXScene_RT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_Sounds_RT">
+        <MSBuild Projects="D:\GLScene\Packages\GLScene_Sounds_RT.dproj"/>
+    </Target>
+    <Target Name="GLScene_Sounds_RT:Clean">
+        <MSBuild Projects="D:\GLScene\Packages\GLScene_Sounds_RT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_Sounds_RT:Make">
+        <MSBuild Projects="D:\GLScene\Packages\GLScene_Sounds_RT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GXScene_Physics_RT">
+        <MSBuild Projects="packages\GXScene_Physics_RT.dproj"/>
+    </Target>
+    <Target Name="GXScene_Physics_RT:Clean">
+        <MSBuild Projects="packages\GXScene_Physics_RT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GXScene_Physics_RT:Make">
+        <MSBuild Projects="packages\GXScene_Physics_RT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GXScene_Cg_RT">
+        <MSBuild Projects="packages\GXScene_Cg_RT.dproj"/>
+    </Target>
+    <Target Name="GXScene_Cg_RT:Clean">
+        <MSBuild Projects="packages\GXScene_Cg_RT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GXScene_Cg_RT:Make">
+        <MSBuild Projects="packages\GXScene_Cg_RT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GXScene_GPU_RT">
+        <MSBuild Projects="packages\GXScene_GPU_RT.dproj"/>
+    </Target>
+    <Target Name="GXScene_GPU_RT:Clean">
+        <MSBuild Projects="packages\GXScene_GPU_RT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GXScene_GPU_RT:Make">
+        <MSBuild Projects="packages\GXScene_GPU_RT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GXScene_DT">
+        <MSBuild Projects="packages\GXScene_DT.dproj"/>
+    </Target>
+    <Target Name="GXScene_DT:Clean">
+        <MSBuild Projects="packages\GXScene_DT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GXScene_DT:Make">
+        <MSBuild Projects="packages\GXScene_DT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="GXScene_RT;GLScene_Sounds_RT;GXScene_Physics_RT;GXScene_Cg_RT;GXScene_GPU_RT;GXScene_DT"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="GXScene_RT:Clean;GLScene_Sounds_RT:Clean;GXScene_Physics_RT:Clean;GXScene_Cg_RT:Clean;GXScene_GPU_RT:Clean;GXScene_DT:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="GXScene_RT:Make;GLScene_Sounds_RT:Make;GXScene_Physics_RT:Make;GXScene_Cg_RT:Make;GXScene_GPU_RT:Make;GXScene_DT:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

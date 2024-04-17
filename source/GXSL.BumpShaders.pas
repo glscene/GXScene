@@ -27,8 +27,6 @@ unit GXSL.BumpShaders;
 
 interface
 
-{$I GXS.Scene.inc}
-
 uses
   Winapi.OpenGL,
   Winapi.OpenGLext,

@@ -49,7 +49,7 @@
   *                                                                            *
   ***************************************************************************** *)
 
-unit PasDblStrUtils;
+unit PasDblStrUtilsx;
 
 {$ifdef fpc}
 {$mode delphi}
